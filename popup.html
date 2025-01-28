@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Хранилище твоих макросов!</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Основное меню -->
+    <div id="mainMenu">
+      <h1><span class="red-text">Ya</span>📝 Хранилище твоих макросов!</h1>
+      <div class="btn">
+        <button id="ChangeMacros">Редактировать макрос</button>
+        <button id="copyBtn">Макрос</button>
+        <button id="settingsBtn">Настройки</button>
+      </div>
+    </div>
+
+    <!-- Менб редактирования макроса -->
+    <div id="editMacros" style="display: none; position: relative;">
+      <form action="">
+        <h1>Редактор макроса</h1>
+        <div id="highlightedMacros"></div>
+        <textarea id="inputMacrosName" placeholder="Введите название для макроса..."></textarea>
+        <textarea id="inputMacros" placeholder="Введите свой макрос..."></textarea>
+      </form>
+      <div class="btn">
+        <button id="editBtn">Назад</button>
+        <button id="saveBtn">Сохранить</button>
+      </div>
+    </div>
+
+    <!-- Текстовое поле для копирования -->
+    <textarea id="copyText" readonly></textarea>
+
+    <!-- Уведомление -->
+    <div id="customAlert" class="alert alert-dismissible fade" role="alert">
+      <span id="alertMessage"></span>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close" id="closeAlertBtn">
+        &times;
+      </button>
+    </div>
+  </body>
+</html>

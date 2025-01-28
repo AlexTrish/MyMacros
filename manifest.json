@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "MyMacros",
+    "version": "1.0",
+    "description": "Быстрой доступ к макросам для комментариев. Разработал - @AlexTrish.",
+    "permissions": ["storage"],
+    "icons": {
+      "16": "MyMacros.png",
+      "48": "MyMacros.png",
+      "128": "MyMacros.png"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
