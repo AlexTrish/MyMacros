@@ -1,0 +1,323 @@
+/* Reset and base styles  */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+	font-weight: inherit;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+	font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 4px;
+    margin-right: 2px;
+    padding: auto;
+    background-color: none;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #4d4d4d;
+    -o-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+}
+
+body {
+    font-family: "Roboto", serif !important;
+    width: 300px;
+    height: 400px;
+    margin: 0px;
+    padding: 10px 20px;
+    border: none;
+  }
+
+button:hover {
+    filter: brightness(95%);
+    transform: scale(0.98);
+}
+
+button:active {
+    filter: brightness(90%);
+    transform: scale(0.97);
+}
+
+#mainMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+#mainMenu h1 {
+    margin: 0px 10px 20px 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#ChangeMacros {
+    width: 260px;
+    height: 30px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+
+    font-size: 16px;
+    background-color: #ffee00;
+}
+
+#ChangeMacros .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn h3 {
+    width: 260px;
+    margin: 10px 0px 0px 0px;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#container-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#container-btn .btn-copy {
+    width: 225px;
+    height: 30px;
+    border-radius: 5px;
+
+    font-size: 16px;
+    text-align: center;
+    background-color: #ffee00;
+}
+
+#container-btn .btn-del {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+
+    font-size: 16px;
+    text-align: center;
+}
+
+
+textarea {
+    display: none;
+}
+
+#editMacros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+}
+
+#editMacros h1 {
+    margin: 0px 10px 20px 10px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#editMacros textarea {
+    width: 260px;
+    height: 150px;
+    display: block;
+    border: #4d4d4d solid 1px;
+    padding: 5px;
+    resize: none;
+
+    margin-bottom: 10px;
+    -o-border-radius: 5px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    
+    font-family: "Roboto", serif;
+    font-size: 12px;
+}
+
+#editMacros #inputMacrosName {
+    width: 260px;
+    height: 30px;
+}
+
+#editMacros button {
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+
+    font-size: 16px;
+    background-color: #ffee00;
+}
+
+#editMacros .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* Основной контейнер для алертов */
+.alert {
+  display: none;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 30px;
+  grid-template-rows: 0fr 1fr;
+  width: 280px;
+  padding: 7px 3px 14px 3px;
+  border-radius: 5px;
+
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  left: 10px;
+
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  transition: opacity 0.5s ease;
+  z-index: 9999;
+}
+
+.alert .close {
+  width: 10px;
+  height: 10px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: #636363;
+  cursor: pointer;
+
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#alertMessage {
+  text-align: center;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.alert-success {
+  background-color: #28a746b3;
+  color: white;
+}
+
+.alert-danger {
+  background-color: #dc3546b3;
+  color: white;
+}
+
+.alert-warning {
+  background-color: #ffc107b3;
+  color: white;
+}
+
+.alert-info {
+  background-color: #17a2b8b3;
+  color: white;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.fade.show {
+  opacity: 1;
+}

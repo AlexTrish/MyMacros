@@ -11,11 +11,10 @@
   <body>
     <!-- Основное меню -->
     <div id="mainMenu">
-      <h1><span class="red-text">Ya</span>📝 Хранилище твоих макросов!</h1>
+      <h1>📝 Хранилище твоих макросов!</h1>
       <div class="btn">
-        <button id="ChangeMacros">Редактировать макрос</button>
-        <button id="copyBtn">Макрос</button>
-        <button id="settingsBtn">Настройки</button>
+        <button id="ChangeMacros">Добавить макрос</button>
+        <h3>Ваши макросы:</h3>
       </div>
     </div>
 
@@ -23,7 +22,6 @@
     <div id="editMacros" style="display: none; position: relative;">
       <form action="">
         <h1>Редактор макроса</h1>
-        <div id="highlightedMacros"></div>
         <textarea id="inputMacrosName" placeholder="Введите название для макроса..."></textarea>
         <textarea id="inputMacros" placeholder="Введите свой макрос..."></textarea>
       </form>
@@ -36,12 +34,13 @@
     <!-- Текстовое поле для копирования -->
     <textarea id="copyText" readonly></textarea>
 
-    <!-- Уведомление -->
-    <div id="customAlert" class="alert alert-dismissible fade" role="alert">
-      <span id="alertMessage"></span>
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close" id="closeAlertBtn">
-        &times;
-      </button>
-    </div>
+     <!-- Уведомление -->
+     <div id="customAlert" class="alert alert-dismissible fade" role="alert">
+        <span id="alertMessage"></span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" id="closeAlertBtn">
+          &times;
+        </button>
+      </div>
   </body>
+  <script src="popup.js"></script>
 </html>
